@@ -3,7 +3,7 @@
     import ThemeSelect from "$lib/theme-select.svelte";
 </script>
 
-<nav class="... sticky top-0">
+<nav class="sticky top-0 z-50">
     <div class="navbar bg-base-100">
         <div class="navbar-start">
             <div class="dropdown">
@@ -59,6 +59,15 @@
         </div>
     </div>
 </nav>
-<main class="flex-grow-1 overflow-y-hidden">
+<main>
     <slot/>
 </main>
+
+<style lang="scss">
+  main {
+    display: flex;
+    height: calc(100vh - 66px);
+    overflow: hidden;
+  }
+
+</style>

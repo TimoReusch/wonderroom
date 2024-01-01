@@ -4,8 +4,8 @@
     let date = new Date();
 </script>
 
-<div class="grid grid-cols-12 gap-1 px-5 h-screen">
-    <div class="col-span-3 overflow-y-auto">
+<div class="grid grid-cols-12 gap-1 px-5">
+    <div class="col-span-3 overflow-y-scroll">
         <button class="btn btn-primary mb-5" style="width: 70%">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                  stroke="currentColor" class="w-6 h-6">
@@ -99,18 +99,25 @@
                 <td class="long">QWERTYUIOPASDFGHJKLZXCVBNM</td>
             </tr>
             <tr>
-                <td class="sticky-col">Seminar-Room</td>
+                <td class="sticky-col">Barbecue</td>
                 <td class="long">QWERTYUIOPASDFGHJKLZXCVBNM</td>
             </tr>
             <tr>
-                <td class="sticky-col">Seminar-Room</td>
+                <td class="sticky-col">Kitchen</td>
                 <td class="long">QWERTYUIOPASDFGHJKLZXCVBNM</td>
             </tr>
             <tr>
-                <td class="sticky-col">Seminar-Room</td>
+                <td class="sticky-col">Kitchen</td>
                 <td class="long">QWERTYUIOPASDFGHJKLZXCVBNM</td>
             </tr>
-
+            <tr>
+                <td class="sticky-col">Kitchen</td>
+                <td class="long">QWERTYUIOPASDFGHJKLZXCVBNM</td>
+            </tr>
+            <tr>
+                <td class="sticky-col">Kitchen</td>
+                <td class="long">QWERTYUIOPASDFGHJKLZXCVBNM</td>
+            </tr>
             </tbody>
         </table>
     </div>

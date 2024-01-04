@@ -1,11 +1,29 @@
 <script>
     import "../../app.postcss";
     import ThemeSelect from "$lib/theme-select.svelte";
-    import { isLeftColumnVisible } from "$lib/store.js";
+    import { showDrawer, onMobile } from "$lib/store.js";
+    import { onDestroy, onMount } from "svelte";
 
     function toggleColumn() {
-        $isLeftColumnVisible = !$isLeftColumnVisible;
+        $showDrawer = !$showDrawer;
     }
+
+    function checkMobile() {
+        $onMobile = window.innerWidth <= 950; // 768px is a common breakpoint for mobile devices
+        if($onMobile) {
+            $showDrawer = false;
+        }
+    }
+
+    onMount(() => {
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+    });
+
+    // Remember to remove the event listener when the component is destroyed
+    onDestroy(() => {
+        window.removeEventListener('resize', checkMobile);
+    });
 </script>
 
 <nav class="sticky top-0 z-50">

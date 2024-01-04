@@ -1,6 +1,5 @@
 <script lang="ts">
     export let reservation: reservation;
-    let modalIsOpen = false;
 
     type reservation = {
         "reservation_id": number,

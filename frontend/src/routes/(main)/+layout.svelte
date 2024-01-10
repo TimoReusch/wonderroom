@@ -19,11 +19,6 @@
         checkMobile();
         window.addEventListener('resize', checkMobile);
     });
-
-    // Remember to remove the event listener when the component is destroyed
-    onDestroy(() => {
-        window.removeEventListener('resize', checkMobile);
-    });
 </script>
 
 <nav class="sticky top-0 z-50">
@@ -36,7 +31,9 @@
                           d="M4 6h16M4 12h16M4 18h7"/>
                 </svg>
             </div>
-            <a class="btn btn-ghost text-xl">Wonderroom</a>
+            {#if !$onMobile}
+                <a class="btn btn-ghost text-xl">Wonderroom</a>
+            {/if}
         </div>
         <div class="navbar-center">
             <button class="btn btn-square">
